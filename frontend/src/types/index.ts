@@ -28,3 +28,32 @@ export interface User {
   role: 'VISITOR' | 'CURATOR' | 'ADMIN';
   avatar?: string;
 }
+
+export interface Option {
+  id: number;
+  text: string;
+  is_correct: boolean;
+}
+
+export interface Question {
+  id: number;
+  text: string;
+  explanation: string;
+  options: Option[];
+}
+
+export interface Quiz {
+  id: number;
+  title: string;
+  description: string;
+  questions: Question[];
+}
+
+export interface Reflection {
+  id: number;
+  username: string;
+  user_avatar?: string;
+  exhibit: number;
+  comment: string;
+  created_at: string;
+}

@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getExhibitBySlug } from '@/services/exhibit';
 import { AlertTriangle, Calendar, User, ShieldX } from 'lucide-react';
+import InteractiveSection from '@/components/museum/InteractiveSection';
 
 export default async function ExhibitDetailPage({ params }: { params: { slug: string } }) {
   let exhibit = null;
@@ -74,7 +75,14 @@ export default async function ExhibitDetailPage({ params }: { params: { slug: st
         </div>
 
       </div>
-
+      {/* Interactive Experience: Quizzes & Reflections */}
+      <InteractiveSection exhibitId={exhibit.id} />
     </article>
   );
 }
+
+// File ke top par add karein:
+
+
+// Aur article tag ke andar end mein add karein:
+     
